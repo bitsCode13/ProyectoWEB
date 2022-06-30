@@ -11,7 +11,7 @@
 	<nav class="menu">
 		<jsp:include page="menu.jsp"></jsp:include>					
 	</nav>
-	
+		
 		
 </body>
 </html>
