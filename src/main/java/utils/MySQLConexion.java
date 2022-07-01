@@ -9,7 +9,7 @@ public class MySQLConexion {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-			String url = "jdbc:mysql://localhost/ciberfarmaweb?useSSL=false&useTimezone=true&serverTimezone=UTC";
+			String url = "jdbc:mysql://localhost/bd_aguaviva_web?useSSL=false&useTimezone=true&serverTimezone=UTC";
 			String usr = "root";
 			String psw = "fastSave.7";
 			con = DriverManager.getConnection(url, usr, psw);
