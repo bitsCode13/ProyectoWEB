@@ -4,9 +4,30 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Ingreso Colegio AguaViva School</title>
+<link rel= "stylesheet" href="css/estilosLogin.css">
 </head>
 <body>
+
+<form>
+
+	<div class="login-box">
+		<h1> Ingresar al Sistema </h1>
+		
+		<div class="textbox">
+		<input type="text" placeholder= "Usurio" name="nombre" value="">
+		</div>
+	
+		<div class="textbox">
+		<input type="password" placeholder= "Contraseña" name="clave" value="">
+		</div>
+	
+		<input type="btn1" placeholder= "submit" name="Entrar" value="">
+	
+	
+	</div>
+
+</form>
 
 </body>
 </html>
