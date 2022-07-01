@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Ingreso Colegio AguaViva School</title>
-<link rel= "stylesheet" href="css/estilosLogin.css">
+
+<link rel="stylesheet" href="css/estilosLogin.css">
 </head>
 <body>
 
@@ -22,7 +23,7 @@
 		<input type="password" placeholder= "Contraseña" name="clave" value="">
 		</div>
 	
-		<input type="btn1" placeholder= "submit" name="Entrar" value="">
+		<input class="btn1" type= "submit" value="Entrar">
 	
 	
 	</div>
