@@ -25,7 +25,7 @@
 						<form>
 							<div
 								class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-								<p class="lead fw-normal mb-0 me-3">Sign in with</p>
+								<p class="lead fw-normal mb-0 me-3">Iniciar Sesion</p>
 								<button type="button" class="btn btn-primary btn-floating mx-1">
 									<i class="fab fa-facebook-f"></i>
 								</button>
@@ -84,8 +84,8 @@
 			<div
 				class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
 				<!-- Copyright -->
-				<div class="text-white mb-3 mb-md-0">Copyright © 2020. All
-					rights reserved.</div>
+				<div class="text-white mb-3 mb-md-0">Copyright © 2022. All rights reserved.
+					</div>
 				<!-- Copyright -->
 
 				<!-- Right -->
