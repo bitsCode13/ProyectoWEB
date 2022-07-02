@@ -14,5 +14,7 @@ public interface UsuarioInterfaces {
 	
 	public Usuario searchUsuario(int u);
 	
+	public Usuario loginUsuario(String usuario, String clave);
+	
 	ArrayList<Usuario> listUsuario(int u);
 }

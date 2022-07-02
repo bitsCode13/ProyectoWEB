@@ -147,4 +147,15 @@ public class GestionUsuario implements UsuarioInterfaces{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Usuario loginUsuario(String usuario, String clave) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+	
+	
 }
