@@ -1,80 +1,18 @@
-@charset "UTF-8";
-
-body
-{	
-	margin:0px;
-	padding:0px;
-	font-family:sans-serif;
-	background:url(file:///Users/vleon/Documents/GitHub/ProyectoWEB/src/main/webapp/img/login.jpg) no-repeat;
-	background-size:cover    
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
 }
-
-.login-box
-{
-	
-	width:300px;
-	position:absolute;
-	top:30%;
-	left:40%;
-	transform:translate(-50%,-50%);
-	color:white;
-	border:3px; 
+.h-custom {
+height: calc(100% - 73px);
 }
-
-.login-box h1
-{
-
-	float:left;
-	font-size:40px;
-	border-bottom: 6px solid #4caf50;
-	margin-bottom: 50px;
-	padding: 10px 0
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
 }
-
-
-.textbox
-{
-
-	width:100%;
-	overflow: hidden;
-	font-size: 20px;
-	padding:80px 0;
-	border-bottom: 2px solid #4caf50;
 }
-
-.textbox input
-
-{
-
-	border: none;
-	outline: none;
-	background: none;
-	color: black;
-	font-size: 23px;
-	
-	width: 80%;
-	float: left;
-	margin: 0 10px;
-
-}
-
-
-
-.btn1
-
-{
-
-	width: 300px;
-	background: none;
-	border: 2px solid #4caf50;
-	color: white;
-	padding: 5px;
-	font-size: 20px;
-	cursor: pointer;
-	margin: 30px 0;
-
-}
-
 
 
 
