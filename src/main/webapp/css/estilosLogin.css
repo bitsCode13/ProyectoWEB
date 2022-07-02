@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 .divider:after,
 .divider:before {
 content: "";
@@ -13,6 +15,3 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
-
-
-
