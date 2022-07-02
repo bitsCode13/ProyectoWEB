@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Ingreso Colegio AguaViva School</title>
 
-<link rel="stylesheet" href="css/estilosLogin.css">
+<link rel="stylesheet" href="css/estilosLogin.css" type="text/css">
 </head>
 <body>
 
