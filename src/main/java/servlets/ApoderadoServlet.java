@@ -81,6 +81,7 @@ public class ApoderadoServlet extends HttpServlet {
 		request.getRequestDispatcher("principal.jsp").forward(request, response);
 		
 		
+		
 	}
 
 	private void update(HttpServletRequest request, HttpServletResponse response) {
