@@ -73,8 +73,6 @@
 							name="btnAction" value="regApo">Registrar</button>
 					</div>
 
-
-
 				</form>
 				
 			</div>
