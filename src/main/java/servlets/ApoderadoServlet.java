@@ -98,6 +98,7 @@ public class ApoderadoServlet extends HttpServlet {
 		
 	}
 
+	
 	private void search(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
 		
