@@ -15,7 +15,7 @@
 			</div>
 			<div class="modal-body p-4">
 
-				<form action="AporadoCrud" method="post">
+				<form action="ApoCrud" method="post">
 
 <%--
 

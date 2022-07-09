@@ -13,7 +13,7 @@ import model.Apoderado;
 /**
  * Servlet implementation class ApoderadoServlet
  */
-@WebServlet(name = "AporadoCrud", description = "mantenimiento de apoderado", urlPatterns = { "/AporadoCrud" })
+@WebServlet(name = "ApoCrud", description = "mantenimiento de apoderado", urlPatterns = { "/AporadoCrud" })
 public class ApoderadoServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
