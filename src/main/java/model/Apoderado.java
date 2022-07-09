@@ -11,19 +11,13 @@ public class Apoderado {
 	
 	
 	
-	
-	
-	
-	
-	
 	@Override
 	public String toString() {
 		return "Apoderado [codApo=" + codApo + ", desApo=" + desApo + ", nomApo=" + nomApo + ", apeApo=" + apeApo
 				+ ", dniApo=" + dniApo + ", telApo=" + telApo + ", domApo=" + domApo + "]";
 	}
 	
-	
-	
+		
 	public int getCodApo() {
 		
 		return codApo;
@@ -67,12 +61,5 @@ public class Apoderado {
 	public void setDomApo(String domApo) {
 		this.domApo = domApo;
 	}
-	
-	
-	
-	
-	
-
-	
 	
 }
