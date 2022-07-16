@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Agua Viva - Empleado Registro</title>
+<title>Agua Viva - Registro Empleado</title>
 <!-- CSS only -->
 
 <link rel="stylesheet" href="css/estilos.css" type="text/css" />
@@ -87,7 +87,15 @@
 							<label for="inputState">Estado:</label> <select id="text"
 								class="form-control" name="cboEstado">
 								<option selected value="-1">Seleccione...</option>
-								
+								<%-- Generamos  --%>
+								<c:forEach items="${lstEstados }" var="e">
+									<c:if test="${ emp.estadoEmp == e.idEst}">
+										<option value="${e.idEst }" selected>${e.desEst }</option>
+									</c:if>
+									<c:if test="${ emp.estadoEmp != e.idEst }">
+										<option value="${e.idEst }">${e.desEst }</option>
+									</c:if>																																
+								</c:forEach>
 							</select>
 						</div>
 					</div>
@@ -101,7 +109,7 @@
 					<button name="btnAccion" value="eli" type="submit"
 						class="btn btn-danger">Eliminar</button>
 
-					<a class="btn btn-warning" href="actualiza?btnAccion=lst">Listado</a>
+					<a class="btn btn-warning" href="registroEmpleado?btnAccion=lst">Listado</a>
 
 				</form>
 				<br />

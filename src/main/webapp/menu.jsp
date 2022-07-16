@@ -20,7 +20,7 @@
 							<a href="#"	class="menu__link menu__link--inside">Registro de Alumno</a>
 						</li>						
 						<li class="menu__inside">
-							<a href="empleadoRegistro.jsp" class="menu__link menu__link--inside">Registro de Empleados</a>
+							<a href="registroEmpleado.jsp" class="menu__link menu__link--inside">Registro de Empleados</a>
 						</li>
 					</ul>
 				</li>

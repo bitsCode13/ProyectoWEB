@@ -11,4 +11,8 @@ public interface EmpleadoInterfaces {
 	public int deleteEmpleado(Empleado e);
 	
 	public ArrayList<Empleado> listado(); 
+	
+	// Buscar por codigo
+	public Empleado buscar (int idEmp);
+	
 }

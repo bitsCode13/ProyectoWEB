@@ -93,20 +93,57 @@ public class GestionEmpleado implements EmpleadoInterfaces {
 
 	@Override
 	public ArrayList<Empleado> listado() {
-		ArrayList<Empleado> lista = null;
+		ArrayList<Empleado> lista = new ArrayList<Empleado>();
 		Connection con = null;
 		PreparedStatement pstm = null;
 		ResultSet rs = null; 
 		try {			
 			con = MySQLConexion.getConexion();
-			String sql = "{call SP_SEARCHEMPLEADO(?)}";
+			//String sql = "call SP_SEARCHEMPLEADO";
+			String sql = "select * from empleados";
 			pstm = con.prepareStatement(sql);
 			
 			rs = pstm.executeQuery();	
 			
-			lista = new ArrayList<Empleado>();
 			while (rs.next()) {
-				Empleado e = new Empleado();
+				Empleado emp = new Empleado();
+				emp.setIdEmple(rs.getInt(1));
+				emp.setCodEmp(rs.getString(2));
+				emp.setNomEmp(rs.getString(3));
+				emp.setApeEmp(rs.getString(4));
+				emp.setDocEmp(rs.getInt(5));
+				emp.setTelEmp(rs.getInt(6));
+				emp.setDirEmp(rs.getString(7));
+				emp.setEdadEmp(rs.getInt(8));
+				emp.setEstadoEmp(rs.getInt(9));
+							
+				lista.add(emp);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error en el listado : " + e.getMessage());
+		} finally {
+			MySQLConexion.closeConexion(con);
+		}
+		return lista;
+	}
+
+	@Override
+	public Empleado buscar(int idEmp) {
+		Empleado e = null;
+		Connection con = null;
+		PreparedStatement pstm = null;		
+		ResultSet rs = null;
+		try {			
+			con = MySQLConexion.getConexion();		
+			String sql = "{CALL SP_SEARCHEMPLEADO(?)}";
+			pstm = con.prepareStatement(sql);	
+			pstm.setInt(1, idEmp);	
+			
+			rs = pstm.executeQuery();				
+			
+			if(rs.next()) { 			
+				e = new Empleado(); 				
 				e.setIdEmple(rs.getInt(1));
 				e.setCodEmp(rs.getString(2));
 				e.setNomEmp(rs.getString(3));
@@ -116,16 +153,15 @@ public class GestionEmpleado implements EmpleadoInterfaces {
 				e.setDirEmp(rs.getString(7));
 				e.setEdadEmp(rs.getInt(8));
 				e.setEstadoEmp(rs.getInt(9));
-							
-				lista.add(e);
+									   	
 			}
 			
-		} catch (Exception e) {
-			System.out.println("Error en el listado : " + e.getMessage());
+		} catch (Exception ex) {
+			System.out.println("Error en el listado : " + ex.getMessage());
 		} finally {
 			MySQLConexion.closeConexion(con);
 		}
-		return lista;
+		return e;
 	}
 
 }
