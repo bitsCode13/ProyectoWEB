@@ -26,7 +26,7 @@
 		<jsp:include page="apoderadoRegistro.jsp"></jsp:include>
 		</div>
 		<div>
-		<jsp:include page="empleadoRegistro.jsp"></jsp:include>
+		<jsp:include page="modalEmpleado.jsp"></jsp:include>
 		</div>
 		
 		${alerta }
