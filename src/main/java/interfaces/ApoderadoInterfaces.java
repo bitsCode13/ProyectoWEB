@@ -14,5 +14,7 @@ public interface ApoderadoInterfaces {
 	
 	public Apoderado searchApoderado(int a);
 	
-	ArrayList<Apoderado> listApoderado(int a);
+	ArrayList<Apoderado> listApoderado();
+	
+	ArrayList<Apoderado> listApoderadoxcod(int a);
 }

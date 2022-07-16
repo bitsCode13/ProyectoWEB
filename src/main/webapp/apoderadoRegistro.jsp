@@ -1,21 +1,6 @@
 
-<button type="button" class="btn btn-primary" data-bs-toggle="modal"
-	data-bs-target="#miModal">Activar Modal</button>
-
-
-
-<div class="modal fade" tabindex="-1" id="miModal">
-	<div class="modal-dialog ">
-		<div class="modal-content ">
-			<div class="modal-header  ">
-				<h5 class="modal-title ">Registro Apoderado</h5>
-
-				<span aria-hidden="true"></span>
-				</button>
-			</div>
-			<div class="modal-body p-4">
-
-				<form action="ApoCrud" method="post">
+<div class="container">
+				<form action="ApoCrud" method="post" >
 
 <%--
 
@@ -74,19 +59,10 @@
 					</div>
 
 				</form>
-				
-			</div>
 
-		</div>
-	</div>
+
+
 </div>
-
-
-
-
-
-
-
 
 
 
