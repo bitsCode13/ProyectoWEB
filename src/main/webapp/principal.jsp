@@ -7,8 +7,9 @@
 <title>Agua Viva - Principal</title>
 
 <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+<link rel="stylesheet" href="cssApo/cssApo.css" type="text/css" />
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet"
@@ -19,12 +20,13 @@
 	<nav class="menu">
 		<jsp:include page="menu.jsp"></jsp:include>					
 	</nav>
-		<a class="btn btn-warning" href="apoCrud?btnAction=lstApo">s</a> <%-- BOTON LISTADO --%>
+		
 		
 		<div>
 		<jsp:include page="apoderadoRegistro.jsp"></jsp:include>
-		</div>
 		${alerta }
+		</div>
+		
 		   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         ></script>
 </body>

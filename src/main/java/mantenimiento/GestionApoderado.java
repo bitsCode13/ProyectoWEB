@@ -90,7 +90,7 @@ public class GestionApoderado implements ApoderadoInterfaces{
 			String sql = "{CALL SP_DELETEAPODERADO(?)}";
 			pst = con.prepareStatement(sql);
 			
-			pst.setString(1, a.getDesApo());
+			pst.setInt(1, a.getCodApo());
 			
 			apo = pst.executeUpdate();
 			

@@ -34,8 +34,17 @@ public class ApoderadoServlet extends HttpServlet {
 		case "lstApo": list(request,response);
 		case "lstApoxCod":listxCod(request,response);  
 		case "busApo": search(request,response);
+		case "blokReg": bloquearRegistro(request,response);
 		}
 		
+		
+	}
+
+	private void bloquearRegistro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setAttribute("readonly","readonly");
+		
+		request.getRequestDispatcher("principal.jsp").forward(request, response);;
 		
 	}
 
@@ -156,7 +165,13 @@ public class ApoderadoServlet extends HttpServlet {
 					request.setAttribute("alerta", "<div class='alert alert-danger' role='alert'>"
 						+ "  Error al eliminar"
 						+ "</div>");
+				}else {
+					request.setAttribute("alerta", "<div class='alert alert-success' role='alert'>"
+							+ "Eliminación Exitosa"
+							+ "</div>");
 				}
+				
+				System.out.println("DATOS"+ a);
 				
 				request.getRequestDispatcher("principal.jsp").forward(request, response);
 	}
