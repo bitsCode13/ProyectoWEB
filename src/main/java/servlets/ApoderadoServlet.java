@@ -40,11 +40,11 @@ public class ApoderadoServlet extends HttpServlet {
 		
 	}
 
-	private void bloquearRegistro(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void bloquearRegistro(HttpServletRequest request, HttpServletResponse response) {
 		
 		request.setAttribute("readonly","readonly");
 		
-		request.getRequestDispatcher("principal.jsp").forward(request, response);;
+		
 		
 	}
 
@@ -137,12 +137,10 @@ public class ApoderadoServlet extends HttpServlet {
 						+ "  Error al Registrar"
 						+ "</div>");
 				}else {
-					request.setAttribute("alerta", "<div class='alert alert-success' role='alert'>"
-							+ "  Apoderado Actualizado"
-							+ "</div>");
+					request.setAttribute("alerta","<script>Swal.fire(title:'Good job!',icon:'success')</script>");
 				}
 				
-				request.getRequestDispatcher("principal.jsp").forward(request, response);
+				request.getRequestDispatcher("apoderadoRegistro.jsp").forward(request, response);
 		
 	}
 
@@ -188,10 +186,11 @@ public class ApoderadoServlet extends HttpServlet {
 	}
 
 	
-	private void search(HttpServletRequest request, HttpServletResponse response) {
+	private void search(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		bloquearRegistro(request, response);
 		
-		int cod = Integer.parseInt(request.getParameter("codApo"));
+		int cod = Integer.parseInt(request.getParameter("codList"));
 		
 		
 		GestionApoderado ga = new GestionApoderado();
@@ -199,6 +198,8 @@ public class ApoderadoServlet extends HttpServlet {
 		Apoderado a = ga.searchApoderado(cod);
 		
 		request.setAttribute("a", a);
+		
+		request.getRequestDispatcher("apoderadoRegistro.jsp").forward(request, response);
 		
 		
 	}

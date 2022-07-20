@@ -1,3 +1,28 @@
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Formulario Apoderado</title>
+
+<link rel="stylesheet" href="css/estilos.css" type="text/css" />
+<link rel="stylesheet" href="cssApo/cssApo.css" type="text/css" />
+
+
+<link rel="stylesheet" href="sweetalert2.min.css">
+
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+<header>
+<nav class="menu">
+	<jsp:include page="menu.jsp"></jsp:include>
+</nav>
+</header>
 <div class="container"> 
 <div class="container_contenedorForm">
 				<form action="apoCrud" method="post" >
@@ -8,14 +33,14 @@
 <div class="form-row">
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion "class="mb-0">CÓDIGO</label> <input type="text"
-							class="form-control " id="inputDescripcion"
-							placeholder="Ingrese Codigo " name="codApo" ${readonly } required>
+							class="form-control " id="inputDescripcion" value="${a.codApo }"
+							placeholder="Ingrese Codigo " name="codApo" ${readonly } >
 					</div>
 					
 	 			
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion" class="mb-0 text-uppercase">DESCRIPCIÓN</label> <input type="text"
-							class="form-control" id="inputDescripcion"
+							class="form-control" id="inputDescripcion" value="${a.desApo }"
 							placeholder="Ingrese una descripción " name="desApo" required>
 					</div>
 					
@@ -23,32 +48,32 @@
 					
 					<div class="form-group mt-2  ">
 						<label for="inputDescripcion"class="mb-0 text-uppercase">NOMBRES</label> <input type="text"
-							class="form-control" id="inputDescripcion"
+							class="form-control" id="inputDescripcion" value="${a.nomApo }"
 							placeholder="Ingrese nombre " name="nomApo" required>
 					</div>
 
 					<div class="form-group mt-2">
 						<label for="inputDescripcion"class="mb-0">APELLIDOS</label> <input type="text"
-							class="form-control" id="inputDescripcion"
+							class="form-control" id="inputDescripcion" value="${a.apeApo }"
 							placeholder="Ingrese apellido" name="apeApo" required>
 					</div>
 
 				<div class="form-row">
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion"class="mb-0">DNI</label> <input type="number"
-							class="form-control" id="inputDescripcion"
+							class="form-control" id="inputDescripcion" value="${a.dniApo }"
 							placeholder="Ingrese el dni" name="dniApo" required>
 					</div>
 
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion"class="mb-0">TELEFONO</label> <input
-							type="number" class="form-control" id="inputDescripcion"
+							type="number" class="form-control" id="inputDescripcion" value="${a.telApo }"
 							placeholder="ingrese el telefono" name="telApo" required>
 					</div>
 				</div>
 					<div class="form-group mt-2">
 						<label for="inputDescripcion"class="mb-0">DOMICILIO</label> <input type="text"
-							class="form-control" id="inputDescripcion" placeholder="Ingrese un domicilio"
+							class="form-control" id="inputDescripcion" placeholder="Ingrese un domicilio" value="${a.domApo }"
 							name="domApo" required>
 					</div>
 					<div class="form-row ">
@@ -75,13 +100,17 @@
 </div>
 				</form>
 
-
-
-</div>
+${alerta }
 
 </div>
 
+</div>
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+		
+		   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 

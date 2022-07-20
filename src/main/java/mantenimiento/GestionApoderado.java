@@ -117,7 +117,7 @@ public class GestionApoderado implements ApoderadoInterfaces{
 			
 			con = MySQLConexion.getConexion();
 			
-			String sql = "{CALL SP_SEARCHAPODERADO(?)}";
+			String sql = "{CALL SP_SEARCHAPODERADOxIde(?)}";
 			pst = con.prepareStatement(sql);
 			
 			pst.setInt(1,a);

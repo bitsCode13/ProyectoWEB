@@ -11,8 +11,8 @@
 <title>Lista Apoderado</title>
 
 <link rel="stylesheet" href="css/estilos.css" type="text/css" />
+<link rel="stylesheet" href="cssApo/cssApo.css" type="text/css" />
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -25,18 +25,10 @@
 <jsp:include page="menu.jsp"></jsp:include>
 </nav>
 
-
 </header>
-<div>
-		<jsp:include page="apoderadoRegistro.jsp"></jsp:include>
-		</div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="container_Listado">
+
+${alerta }
 <br>
 <br>
 <table class="table table-striped">
@@ -65,6 +57,15 @@
       <td>${a.dniApo }</td>
       <td>${a.telApo }</td>
        <td>${a.domApo }</td>
+       <td>
+       		<form action="apoCrud" method="post">
+									<input type="hidden"  name="codList" value="${a.codApo}">
+									<button class="btn btn-link "  name="btnAction" value="busApo"> 
+									<img class="boton_editar" alt="" src="img/edit.png" > 
+									</button>
+								</form>
+       
+       </td>
     </tr>
   
   
@@ -77,10 +78,9 @@
   
 </table>
 
+</div>
 
-
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

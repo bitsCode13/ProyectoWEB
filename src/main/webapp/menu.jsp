@@ -13,8 +13,7 @@
 
 					<ul class="menu__nesting">
 						<li class="menu__inside">
-							<a href="#"	class="menu__link menu__link--inside" data-bs-toggle="modal"
-							data-bs-target="#miModal">Registro de Apoderado</a>
+							<a href="apoderadoRegistro.jsp"	class="menu__link menu__link--inside" >Apoderado</a>
 						</li>
 						<li class="menu__inside">
 							<a href="#"	class="menu__link menu__link--inside">Registro de Alumno</a>
