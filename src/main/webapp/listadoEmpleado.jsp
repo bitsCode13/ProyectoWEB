@@ -76,29 +76,20 @@
 								<a href="registroEmpleado?btnAccion=buscar&cod=<%=e.getIdEmple()%>" 
 								class="btn btn-link">  
 									<img
-									alt="" src="img/edit1.png" 
-									onmouseover="src='img/edit2.png'"
-									onmouseout="src='img/edit1.png'"></a>
+									alt="" src="img/editar.png" 
+									onmouseover="src='img/editar1.png'"
+									onmouseout="src='img/editar.png'"></a>
 
 							</td>
 							<td>
 								<%-- cambiar de estado empleado--%> 
-								<a href="registroEmpleado?btnAccion=buscar&cod=<%=e.getIdEmple()%>=eli" 
+								<a href="registroEmpleado?btnAccion=buscar&eli=<%=e.getIdEmple()%>" 
 								class="btn btn-link">  
 									<img
 									alt="" src="img/trash.png" 
 									onmouseover="src='img/trash1.png'"
 									onmouseout="src='img/trash.png'"></a>
 									
-									<form action="registroEmpleado" method="post">
-								<input type="hidden" name="eli" value="<%=e.getIdEmple() %>">
-									<button class="btn btn-link" name="btnAccion" value="eli">
-										<img alt="" src="img/trash.png"
-											onmouseover="src='img/trash1.png'"
-											onmouseout="src='img/trash.png'">
-									</button>
-								</form>
-
 							</td>
 						</tr>
 						<%

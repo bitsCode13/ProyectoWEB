@@ -18,4 +18,7 @@ public interface EmpleadoInterfaces {
 	// Generar código automatico
 	public String generarCodigo();
 	
+	// filtro
+	public ArrayList<Empleado> listado(int estado);
+	
 }

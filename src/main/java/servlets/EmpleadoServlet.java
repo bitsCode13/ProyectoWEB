@@ -58,9 +58,47 @@ public class EmpleadoServlet extends HttpServlet {
 		case "buscar":
 			buscar(request, response);
 			break;
+		case "listado":
+			muestraListado(request, response);
+			break;
+		case "filtro":
+			filtrarEmpleados(request, response);
+			break;
 		default:
 			break;
 		}
+	}
+
+	private void filtrarEmpleados(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// Obtener el estado selecionado
+		int estado = Integer.parseInt(request.getParameter("cboEstado"));
+		
+		GestionEmpleado ge = new GestionEmpleado();
+		ArrayList<Empleado> lista = ge.listado(estado);
+		
+		// Enviar como atributo
+		request.setAttribute("lstEmpleados", lista);
+		
+		GestionEstado gEst = new GestionEstado();
+		ArrayList<Estado> lstEstados = gEst.listado();
+		request.setAttribute("lstEstados", lstEstados);
+		
+		// redireccionar a la página
+		request.getRequestDispatcher("listadoEmpleadoPorEstado.jsp").forward(request, response);
+	}
+
+	private void muestraListado(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		GestionEmpleado ge = new GestionEmpleado();
+		ArrayList<Empleado> lista = ge.listado();
+		
+		// Enviar como atributo
+		request.setAttribute("lstEmpleados", lista);
+	
+		GestionEstado gEst = new GestionEstado();
+		ArrayList<Estado> lstEstados = gEst.listado();
+		request.setAttribute("lstEstados", lstEstados);
+		
+		request.getRequestDispatcher("listadoEmpleadoPorEstado.jsp").forward(request, response);
 	}
 
 	private void buscar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

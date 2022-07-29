@@ -40,7 +40,7 @@
 							<a href="#"	class="menu__link menu__link--inside">Reporte de Alumnos por Apoderado</a>
 						</li>						
 						<li class="menu__inside">
-							<a href="#"	class="menu__link menu__link--inside">Reporte de Empleados por Área</a>
+							<a href="registroEmpleado?btnAccion=listado"	class="menu__link menu__link--inside">Reporte de Empleados por Estado</a>
 						</li>
 					</ul>
 				</li>

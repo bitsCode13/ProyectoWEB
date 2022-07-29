@@ -196,4 +196,44 @@ public class GestionEmpleado implements EmpleadoInterfaces {
 		return codigo;
 	}
 
+	@Override
+	public ArrayList<Empleado> listado(int estado) {
+		ArrayList<Empleado> lista = null;
+		Connection con = null;
+		PreparedStatement pstm = null;
+		// para listados, consultas, busquedas
+		ResultSet rs = null; // Conjunto de resultado
+		try {			
+			con = MySQLConexion.getConexion();
+			String sql = "select * from empleados where estado_id_estado = ?";
+			pstm = con.prepareStatement(sql);
+			pstm.setInt(1, estado);
+			
+			rs = pstm.executeQuery();	
+			
+			// pasar el rs --> lista
+			lista = new ArrayList<Empleado>();
+			while (rs.next()) {
+				Empleado e = new Empleado();
+				e.setIdEmple(rs.getInt(1));
+				e.setCodEmp(rs.getString(2));
+				e.setNomEmp(rs.getString(3));
+				e.setApeEmp(rs.getString(4));
+				e.setDocEmp(rs.getInt(5));
+				e.setTelEmp(rs.getInt(6));
+				e.setDirEmp(rs.getString(7));
+				e.setEdadEmp(rs.getInt(8));
+				e.setEstadoEmp(rs.getInt(9));
+				
+				lista.add(e);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error en el listado : " + e.getMessage());
+		} finally {
+			MySQLConexion.closeConexion(con);
+		}
+		return lista;
+	}
+
 }
