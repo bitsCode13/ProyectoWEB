@@ -36,42 +36,42 @@
 						<div class="form-group">
 							<label for="inputCode">Nro. Identificador:</label> <input
 								type="text" name="txtIdEmp" class="form-control" id="inputCode"
-								value="" readonly>
-						</div>
+								value="${e.idEmple }" placeholder="Generado Automatico" readonly>
+						</div> 
 
 						<div class="form-group">
 							<label for="inputCode">Código Empleado:</label> <input
-								type="text" name="txtCodEmp" value=""
+								type="text" name="txtCodEmp" value="${e.codEmp}"
 								class="form-control" id="inputCode" maxlength="6"
-								placeholder="Ingrese código empleado Ej. EM0001">
+								placeholder="Generado Automatico" readonly>
 						</div>
 						<div class="form-group">
 							<label for="inputName">Nombre:</label> <input type="text"
-								name="txtNomEmp" value="" class="form-control"
+								name="txtNomEmp" value="${e.nomEmp }" class="form-control"
 								id="inputName"
 								placeholder="IngreseNombre"/>
 						</div>
 						<div class="form-group">
 							<label for="inputSurname">Apellidos:</label>
 								<input type="text" class="form-control" id="inputSurname"
-									name="txtApeEmp" value="" placeholder="Ingrese apellidos" />
+									name="txtApeEmp" value="${e.apeEmp }" placeholder="Ingrese apellidos" />
 						</div>
 						<div class="form-group">
         		 			<label for="inputDni">Dni:</label>
         		 				<input type="text" class="form-control" id="inputDni" 
-        		 				name="txtDniEmp" value="" maxlength="8"
+        		 				name="txtDniEmp" value="${e.docEmp }" maxlength="8"
         		 				placeholder="Ingrese Nro. Dni"/>
         				</div>
         				<div class="form-group">
         		 			<label for="inputPhone">Telefono:</label>
         		 				<input type="text" class="form-control" id="inputPhone" 
-        		 				name="txtTelEmp" value="" maxlength="9"
+        		 				name="txtTelEmp" value="${e.telEmp }" maxlength="9"
         		 				placeholder="Ingrese Nro. Telefono"/>
         				</div>
         				<div class="form-group">
         		 			<label for="inputDirection">Dirección:</label>
         		 				<input type="text" class="form-control" id="inputDirection" 
-        		 				name="txtDirEmp" value="" 
+        		 				name="txtDirEmp" value="${e.dirEmp }" 
         		 				placeholder="Ingrese una dirección"/>
         				</div>
 					</div>
@@ -79,7 +79,7 @@
 						<div class="form-group col-md-6">
 							<label for="inputCategory">Edad:</label> 							       		 	
         		 				<input type="number" class="form-control" id="nombre" 
-        		 				name="txtEdaEmp" value="" min="0"
+        		 				name="txtEdaEmp" value="${e.edadEmp }" min="0"
         		 				placeholder="Ingrese edad"/>        		 			
 						</div>
 
@@ -88,12 +88,12 @@
 								class="form-control" name="cboEstado">
 								<option selected value="-1">Seleccione...</option>
 								<%-- Generamos  --%>
-								<c:forEach items="${lstEstados }" var="e">
-									<c:if test="${ emp.estadoEmp == e.idEst}">
-										<option value="${e.idEst }" selected>${e.desEst }</option>
+								<c:forEach items="${lstEstados }" var="c">
+									<c:if test="${ e.estadoEmp == c.idEst}">
+										<option value="${c.idEst }" selected>${c.desEst }</option>
 									</c:if>
-									<c:if test="${ emp.estadoEmp != e.idEst }">
-										<option value="${e.idEst }">${e.desEst }</option>
+									<c:if test="${ e.estadoEmp != c.idEst }">
+										<option value="${c.idEst }">${c.desEst }</option>
 									</c:if>																																
 								</c:forEach>
 							</select>

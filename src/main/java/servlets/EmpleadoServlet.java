@@ -181,17 +181,18 @@ public class EmpleadoServlet extends HttpServlet {
 	private void registrar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// Variables
 		String codEmp, nomEmp, apeEmp, dirEmp;
-		int idEmple, docEmp, telEmp, edadEmp, estEmp;
+		int /*idEmple*/ docEmp, telEmp, edadEmp, estEmp;
 		
 		// Leer Datos
-		idEmple = Integer.parseInt(request.getParameter("txtIdEmp"));
+		//idEmple = Integer.parseInt(request.getParameter("txtIdEmp"));
+		
 		codEmp = request.getParameter("txtCodEmp");
-		if(!codEmp.matches("EM[0-9]{4}")) {
+		/*if(!codEmp.matches("EM[0-9]{4}")) {
 			request.setAttribute("mensaje",
 					"<div class='alert alert-danger' role='alert'>" + "Ingrese Código</div>");
-			request.getRequestDispatcher("empleadoRegistro.jsp").forward(request, response);
+			request.getRequestDispatcher("registroEmpleado.jsp").forward(request, response);
 			return;
-		}
+		}*/
 		nomEmp = request.getParameter("txtNomEmp");
 		apeEmp = request.getParameter("txtApeEmp");
 		docEmp = Integer.parseInt(request.getParameter("txtDniEmp"));
@@ -202,7 +203,7 @@ public class EmpleadoServlet extends HttpServlet {
 		
 		// Proceso
 		Empleado e = new Empleado();
-		e.setIdEmple(idEmple);
+		//e.setIdEmple(idEmple);
 		e.setCodEmp(codEmp);
 		e.setNomEmp(nomEmp);
 		e.setApeEmp(apeEmp);

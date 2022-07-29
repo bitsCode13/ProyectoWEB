@@ -30,7 +30,7 @@
 		<main>
 		<br />
 			<section style="width: 100%; ">
-				<h1>Mantenimiento Empleados</h1>
+				<h1>Listado de Empleados</h1>
 				<table class="table">
 					<thead>
 						<tr>
@@ -44,6 +44,8 @@
 							<th scope="col">Dirección</th>
 							<th scope="col">Edad</th>
 							<th scope="col">Estado</th>
+							<th scope="col"></th>
+							<th scope="col"></th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
@@ -63,7 +65,7 @@
 							<td ><%=e.getIdEmple()%></td>
 							<td><%=e.getCodEmp()%></td>
 							<td><%=e.getNomEmp()%></td>
-							<td><%=e.getApeEmp()%>"</td>
+							<td><%=e.getApeEmp()%></td>
 							<td><%=e.getDocEmp()%></td>
 							<td><%=e.getTelEmp()%></td>
 							<td ><%=e.getDirEmp()%></td>
@@ -74,8 +76,28 @@
 								<a href="registroEmpleado?btnAccion=buscar&cod=<%=e.getIdEmple()%>" 
 								class="btn btn-link">  
 									<img
-									alt="" src="img/edit1.png" onmouseover="src='img/edit2.png'"
+									alt="" src="img/edit1.png" 
+									onmouseover="src='img/edit2.png'"
 									onmouseout="src='img/edit1.png'"></a>
+
+							</td>
+							<td>
+								<%-- cambiar de estado empleado--%> 
+								<a href="registroEmpleado?btnAccion=buscar&cod=<%=e.getIdEmple()%>=eli" 
+								class="btn btn-link">  
+									<img
+									alt="" src="img/trash.png" 
+									onmouseover="src='img/trash1.png'"
+									onmouseout="src='img/trash.png'"></a>
+									
+									<form action="registroEmpleado" method="post">
+								<input type="hidden" name="eli" value="<%=e.getIdEmple() %>">
+									<button class="btn btn-link" name="btnAccion" value="eli">
+										<img alt="" src="img/trash.png"
+											onmouseover="src='img/trash1.png'"
+											onmouseout="src='img/trash.png'">
+									</button>
+								</form>
 
 							</td>
 						</tr>

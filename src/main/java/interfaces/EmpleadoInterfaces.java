@@ -15,4 +15,7 @@ public interface EmpleadoInterfaces {
 	// Buscar por codigo
 	public Empleado buscar (int idEmp);
 	
+	// Generar código automatico
+	public String generarCodigo();
+	
 }
