@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mantenimiento.GestionApoderado;
 import model.Apoderado;
+import utils.Validacion;
 
 /**
  * Servlet implementation class ApoderadoServlet
@@ -32,7 +33,7 @@ public class ApoderadoServlet extends HttpServlet {
 		case "actApo": update(request,response);
 		case "eliApo": delete(request,response);
 		case "lstApo": list(request,response);
-		case "lstApoxCod":listxCod(request,response);  
+		case "lstApoMul":lstApoMul(request,response);  
 		case "busApo": search(request,response);
 		case "blokReg": bloquearRegistro(request,response);
 		}
@@ -48,19 +49,20 @@ public class ApoderadoServlet extends HttpServlet {
 		
 	}
 
-	private void listxCod(HttpServletRequest request, HttpServletResponse response) {
+	private void lstApoMul(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		int cod = Integer.parseInt(request.getParameter("codApe"));
+		String cod = request.getParameter("textoMultiple");
 		
 		GestionApoderado ga = new GestionApoderado();
 		
-		ArrayList<Apoderado> lista = ga.listApoderadoxcod(cod);
+		ArrayList<Apoderado> lista = ga.listmultipleApoderado(cod);
 		
-		if (lista == null) {
-			
-		}
+		System.out.println(lista);
 		
-		request.setAttribute("listarApoxCod", lista);
+		
+		request.setAttribute("listadoApoderados", lista);
+		
+		request.getRequestDispatcher("listadoApoderado.jsp").forward(request, response);
 		
 		
 	}
@@ -78,33 +80,38 @@ public class ApoderadoServlet extends HttpServlet {
 		Apoderado a = new Apoderado();
 		
 		//a.setCodApo(cod);
-		a.setDesApo(des);
-		a.setNomApo(nom);
-		a.setApeApo(ape);
-		a.setDniApo(dni);
-		a.setTelApo(tel);
-		a.setDomApo(dom);
 		
-		GestionApoderado ga = new GestionApoderado();
-		
-		int ok = ga.insertApoderado(a);
-		
-		if(ok ==0) {
-			// mensaje de error
-			request.setAttribute("alerta", "<div class='alert alert-danger' role='alert'>"
-				+ "  Error al Registrar"
-				+ "</div>");
-		}else {
-			request.setAttribute("alerta", "<div class='alert alert-success' role='alert'>"
-					+ "  Apoderado Registrado"
+			
+			
+			a.setDesApo(des);
+			a.setNomApo(nom);
+			a.setApeApo(ape);
+			a.setDniApo(dni);
+			a.setTelApo(tel);
+			a.setDomApo(dom);
+			
+			GestionApoderado ga = new GestionApoderado();
+			
+			int ok = ga.insertApoderado(a);
+			
+			if(ok ==0) {
+				// mensaje de error
+				request.setAttribute("alerta", "<div class='alert alert-danger' role='alert'>"
+					+ "  Error al Registrar"
 					+ "</div>");
+			}else {
+				request.setAttribute("alerta", "<div class='alert alert-success' role='alert'>"
+						+ "  Apoderado Registrado"
+						+ "</div>");
+			}
+			
+			request.getRequestDispatcher("apoderadoRegistro.jsp").forward(request, response);
 		}
 		
-		request.getRequestDispatcher("principal.jsp").forward(request, response);
 		
 		
 		
-	}
+	
 
 	private void update(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -171,7 +178,7 @@ public class ApoderadoServlet extends HttpServlet {
 				
 				System.out.println("DATOS"+ a);
 				
-				request.getRequestDispatcher("principal.jsp").forward(request, response);
+				request.getRequestDispatcher("listadoApoderado.jsp").forward(request, response);
 	}
 
 	private void list(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -180,6 +187,7 @@ public class ApoderadoServlet extends HttpServlet {
 		ArrayList<Apoderado> lista = ga.listApoderado();
 		
 		request.setAttribute("listadoApoderados", lista);
+		System.out.println(lista);
 		
 		request.getRequestDispatcher("listadoApoderado.jsp").forward(request, response);
 		

@@ -23,8 +23,14 @@
 	<jsp:include page="menu.jsp"></jsp:include>
 </nav>
 </header>
+
 <div class="container"> 
+<div class="container_centrar-form">
+<h1 id="titulo">APODERADO</h1>
 <div class="container_contenedorForm">
+
+	
+
 				<form action="apoCrud" method="post" >
 
 
@@ -34,7 +40,7 @@
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion "class="mb-0">CÓDIGO</label> <input type="text"
 							class="form-control " id="inputDescripcion" value="${a.codApo }"
-							placeholder="Ingrese Codigo " name="codApo" ${readonly } >
+							placeholder="Ingrese Codigo " name="codApo" readonly >
 					</div>
 					
 	 			
@@ -60,15 +66,15 @@
 
 				<div class="form-row">
 					<div class="form-group mt-2 col-md-6">
-						<label for="inputDescripcion"class="mb-0">DNI</label> <input type="number"
+						<label for="inputDescripcion"class="mb-0">DNI</label> <input type="text"
 							class="form-control" id="inputDescripcion" value="${a.dniApo }"
-							placeholder="Ingrese el dni" name="dniApo" required>
+							placeholder="Ingrese el dni" name="dniApo" min="0" maxlength="8" onkeydown="if(this.value.legth ==8) return false"  required >
 					</div>
 
 					<div class="form-group mt-2 col-md-6">
 						<label for="inputDescripcion"class="mb-0">TELEFONO</label> <input
-							type="number" class="form-control" id="inputDescripcion" value="${a.telApo }"
-							placeholder="ingrese el telefono" name="telApo" required>
+							type="text" class="form-control" id="inputDescripcion" value="${a.telApo }"
+							placeholder="ingrese el telefono" name="telApo" min="0" maxlength="9" onkeyup="if(this.value.legth ==9) return false"  required>
 					</div>
 				</div>
 					<div class="form-group mt-2">
@@ -93,17 +99,18 @@
 					<div class="form-group ml-2 ">
 						<a class="btn btn-warning btn-lg" href="apoCrud?btnAction=lstApo">Listar</a> <%-- BOTON LISTADO --%>
 					</div>
-					
-					<a class="btn btn-success btn-lg" href="apoCrud?btnAction=blokReg" >
+					<div class="form-group ml-2 ">
+					<a class="btn btn-success btn-lg" href="apoCrud?btnAction=blokReg" > Buscar
 						
 					</a>
+					</div>
 </div>
 				</form>
 
 ${alerta }
 
 </div>
-
+</div>
 </div>
 
 

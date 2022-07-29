@@ -1,7 +1,15 @@
+.container_centrar-form{
+	height:50vh;
+	display:grid;
+	
+place-items:center;
+	
+}
+
 .container_contenedorForm{
 	width: auto;
-	padding: 0 20% 0 20%;
 	
+
 }
 
 .container_Listado{
@@ -10,11 +18,17 @@
 	
 }
 
-.boton_editar{
-	width: 20px;
+.img_editar{
+	
+	width: 25px;
+	height: 25px;
 }
 
-.boton_editar:hover{
-	width: 20px;
+
+
+#titulo{
+	text-align:center;
+	font-size:70px;
 	
+	line-height: 150px;
 }

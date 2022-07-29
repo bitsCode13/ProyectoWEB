@@ -16,5 +16,5 @@ public interface ApoderadoInterfaces {
 	
 	ArrayList<Apoderado> listApoderado();
 	
-	ArrayList<Apoderado> listApoderadoxcod(int a);
+	ArrayList<Apoderado> listmultipleApoderado(String a);
 }

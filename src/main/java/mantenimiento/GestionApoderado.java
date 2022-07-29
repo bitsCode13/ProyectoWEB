@@ -147,7 +147,7 @@ public class GestionApoderado implements ApoderadoInterfaces{
 	}
 
 	@Override
-	public ArrayList<Apoderado> listApoderadoxcod(int a) {
+	public ArrayList<Apoderado> listmultipleApoderado(String a) {
 		
 		ArrayList<Apoderado> lista = new ArrayList<Apoderado>();
 		Apoderado ap = null;
@@ -159,10 +159,10 @@ public class GestionApoderado implements ApoderadoInterfaces{
 			
 			con = MySQLConexion.getConexion();
 			
-			String sql = "{CALL SP_SEARCHAPODERADOxIde(?)}";
+			String sql = "{CALL sp_busquedamultiple(?)}";
 			pst = con.prepareStatement(sql);
 			
-			pst.setInt(1,a);
+			pst.setString(1,a);
 			
 			rs = pst.executeQuery();
 			
@@ -182,7 +182,7 @@ public class GestionApoderado implements ApoderadoInterfaces{
 			lista.add(ap);
 			
 		} catch (Exception e) {
-			System.out.println("Error al listar un apoderado "+e.getMessage());
+			System.out.println("Error al listar multiple un apoderado "+e.getMessage());
 		}finally {
 			MySQLConexion.closeConexion(con);
 		}
@@ -205,8 +205,6 @@ public class GestionApoderado implements ApoderadoInterfaces{
 			
 			String sql = "select * from apoderados";
 			pst = con.prepareStatement(sql);
-			
-			
 			
 			rs = pst.executeQuery();
 			
