@@ -147,9 +147,46 @@ public class GestionApoderado implements ApoderadoInterfaces{
 	}
 
 	@Override
-	public ArrayList<Apoderado> listApoderado(int a) {
-		// TODO Auto-generated method stub
-		return null;
+	public ArrayList<Apoderado> listApoderado() {
+ArrayList<Apoderado> lista = new ArrayList<Apoderado>();
+		
+		Connection con = null ;
+		PreparedStatement pst = null ;
+		ResultSet rs = null;
+		
+		try {
+			
+			con = MySQLConexion.getConexion();
+			
+			String sql = "select * from apoderados";
+			pst = con.prepareStatement(sql);
+			
+			rs = pst.executeQuery();
+			
+			while (rs.next()) {
+				Apoderado ap = new Apoderado();
+				ap.setCodApo(rs.getInt(1));
+				ap.setDesApo(rs.getString(2));
+				ap.setNomApo(rs.getString(3));
+				ap.setApeApo(rs.getString(4));
+				ap.setDniApo(rs.getInt(5));
+				ap.setTelApo(rs.getInt(6));
+				ap.setDomApo(rs.getString(7));
+				
+				lista.add(ap);
+			}
+			
+			
+			
+		} catch (Exception e) {
+			System.out.println("Error al listar los apoderados "+e.getMessage());
+		}finally {
+			MySQLConexion.closeConexion(con);
+		}
+		
+		
+		return lista ;
 	}
+	
 
 }

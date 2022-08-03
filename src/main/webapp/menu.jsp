@@ -13,11 +13,11 @@
 
 					<ul class="menu__nesting">
 						<li class="menu__inside">
-							<a href="#"	class="menu__link menu__link--inside" data-bs-toggle="modal"
+							<a href="apoderadoRegistro.jsp"	class="menu__link menu__link--inside" data-bs-toggle="modal"
 							data-bs-target="#miModal">Registro de Apoderado</a>
 						</li>
 						<li class="menu__inside">
-							<a href="#"	class="menu__link menu__link--inside">Registro de Alumno</a>
+							<a href="AluCrud?btnAction=cargar"	class="menu__link menu__link--inside">Registro de Alumno</a>
 						</li>						
 						<li class="menu__inside">
 							<a href="#" class="menu__link menu__link--inside">Registro de Empleados</a>
