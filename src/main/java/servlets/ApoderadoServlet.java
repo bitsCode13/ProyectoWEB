@@ -208,8 +208,7 @@ public class ApoderadoServlet extends HttpServlet {
 		request.setAttribute("a", a);
 		
 		request.getRequestDispatcher("apoderadoRegistro.jsp").forward(request, response);
-		
-		
+				
 	}
 
 }

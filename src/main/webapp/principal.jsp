@@ -25,6 +25,16 @@
 		
 	</header>	
 		
+
+		<div>
+		<jsp:include page="apoderadoRegistro.jsp"></jsp:include>
+		</div>
+		<div>
+		<jsp:include page="empleadoRegistro.jsp"></jsp:include>
+		</div>
+		
+		${alerta }
+
 		   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         ></script>
 </body>
