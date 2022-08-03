@@ -56,10 +56,12 @@
 			</form> 
 ${alerta }
 
+	<div>
 		<table class="table table-striped">
 
 			<thead>
 				<tr>
+				<%-- --%>
 					<th scope="col">CODIGO</th>
 					<th scope="col">DESCRIPCIÓN</th>
 					<th scope="col">NOMBRES</th>
@@ -67,8 +69,11 @@ ${alerta }
 					<th scope="col">DOCUMENTO</th>
 					<th scope="col">TELEFONO</th>
 					<th scope="col">DOMICILIO</th>
-					<th scope="col"></th>
-					<th scope="col"></th>
+					
+					
+					
+					
+					
 				</tr>
 			</thead>
 			<tbody>
@@ -84,29 +89,37 @@ ${alerta }
 						<td>${a.dniApo }</td>
 						<td>${a.telApo }</td>
 						<td>${a.domApo }</td>
+						<td>  
 						
+					<%--
+						<a href="registro?btnAction=buscar&cod=${a.codApo }" > <img alt="" src="img/edit1.png" class="btn btn-link "
+								
+									 onmouseover="src='img/edit.png'"
+									onmouseout="src='img/edit1.png'"></a>
+										
+								 --%>										 
 						
-						
-						<td>
 							<form action="apoCrud" method="post">
-								 <input type="hidden" name="codList" value="${a.codApo}">
+										 <input type="hidden" name="codList" value="${a.codApo }">
 								<button class="btn btn-link" name="btnAction" value="busApo">
 									<img class="img_editar"  src="img/edit.png">
 									
 								</button>
 								
-							</form>
- 
-						</td>
-						<td>
-						<form action="apoCrud" method="post"> 
-						<input type="hidden" name="codApo" value="${a.codApo}">
+								<input type="hidden" name="codApo" value="${a.codApo }">
 								<button   class="btn btn-link" name="btnAction" value="eliApo">
 									<img class="img_editar" src="img/eliminar.png" >
-								</button>
-							</form> <%--  --%>
+								</button> <%--	--%>	
+								
+								</form>
+ 
 						</td>
-					<%-- 		--%>
+					<%-- 	<td>
+						<form action="apoCrud" method="post"> 
+						
+							</form> 
+						</td> --%>
+					
 					
 						
 					</tr>
@@ -120,7 +133,7 @@ ${alerta }
 			</tbody>
 
 		</table>
-
+</div>
 	</div>
 
 	<script

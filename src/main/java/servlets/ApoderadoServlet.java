@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mantenimiento.GestionApoderado;
 import model.Apoderado;
-import utils.Validacion;
+
 
 /**
  * Servlet implementation class ApoderadoServlet
