@@ -20,9 +20,6 @@
 						</li>						
 						<li class="menu__inside">
 
-							<a href="#" class="menu__link menu__link--inside" data-bs-toggle="modal" 
-							data-bs-target="#exampleModal">Registro de Empleados</a>
-
 							<a href="registroEmpleado?btnAccion=cargar" class="menu__link menu__link--inside">Registro de Empleados</a>
 
 						</li>
