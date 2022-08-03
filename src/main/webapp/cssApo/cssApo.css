@@ -1,0 +1,35 @@
+.container_centrar-form{
+	height:50vh;
+	display:grid;
+	
+place-items:center;
+	
+}
+
+.container_contenedorForm{
+	width: auto;
+	
+
+}
+
+.container_Listado{
+	width: auto;
+	margin: 0 10% 0 10%;
+	
+}
+
+.img_editar{
+	
+	width: 25px;
+	height: 25px;
+	
+}
+
+
+
+#titulo{
+	text-align:center;
+	font-size:70px;
+	
+	line-height: 150px;
+}
