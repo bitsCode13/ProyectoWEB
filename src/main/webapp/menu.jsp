@@ -17,11 +17,12 @@
 						</li>
 						<li class="menu__inside">
 							<a href="#"	class="menu__link menu__link--inside">Registro de Alumno</a>
+						</li>
+						<li class="menu__inside">
+							<a href="reservaMatricula?btnAccion=cargar"	class="menu__link menu__link--inside">Registro de Reserva Matricula</a>
 						</li>						
 						<li class="menu__inside">
-
 							<a href="registroEmpleado?btnAccion=cargar" class="menu__link menu__link--inside">Registro de Empleados</a>
-
 						</li>
 					</ul>
 				</li>
@@ -38,10 +39,13 @@
 							<a href="#"	class="menu__link menu__link--inside">Reporte de Alumnos Deudores</a>
 						</li>
 						<li class="menu__inside">
+							<a href="reservaMatricula?btnAccion=lst" class="menu__link menu__link--inside">Reporte de Reservas</a>
+						</li>
+						<li class="menu__inside">
 							<a href="#"	class="menu__link menu__link--inside">Reporte de Alumnos por Apoderado</a>
 						</li>						
 						<li class="menu__inside">
-							<a href="registroEmpleado?btnAccion=listado"	class="menu__link menu__link--inside">Reporte de Empleados por Estado</a>
+							<a href="registroEmpleado?btnAccion=listado" class="menu__link menu__link--inside">Reporte de Empleados por Estado</a>
 						</li>
 					</ul>
 				</li>
