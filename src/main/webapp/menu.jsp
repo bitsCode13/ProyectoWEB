@@ -1,6 +1,6 @@
 <%-- Para el menu de las paginas --%>
 <section class="menu__container">
-			<h1 class="menu__logo">Agua Viva. School</h1>
+			<h1 class="menu__logo">Agua Viva School</h1>
 
 			<ul class="menu__links">
 				<li class="menu__item">
@@ -50,7 +50,7 @@
 				</li>
 				
 				<li class="menu__item">
-					<a href="#" class="menu__link">Administración de Usuarios</a>
+					<a href="usuarioRegistro.jsp" class="menu__link">Administración de Usuarios</a>
 				</li>
 
 				<li class="menu__item">
