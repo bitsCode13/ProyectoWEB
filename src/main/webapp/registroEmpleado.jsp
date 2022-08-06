@@ -36,7 +36,7 @@
 						<div class="form-group">
 							<label for="inputCode">Nro. Identificador:</label> <input
 								type="text" name="txtIdEmp" class="form-control" id="inputCode"
-								value="${e.idEmple }" placeholder="Generado Automatico" readonly>
+								value="${u.codUsu }" placeholder="Generado Automatico" readonly>
 						</div> 
 
 						<div class="form-group">
