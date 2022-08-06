@@ -95,7 +95,7 @@ public class AlumnoServlet extends HttpServlet {
 		ArrayList< Apoderado> lstApo=gesAp.listApoderado();
 		request.setAttribute("lstApo", lstApo);
 
-		
+		request.setAttribute("readonly", "readonly");
 		
 		request.setAttribute("a", a);
 		request.getRequestDispatcher("alumnoRegistro.jsp").forward(request, response);

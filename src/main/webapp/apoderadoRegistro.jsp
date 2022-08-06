@@ -6,12 +6,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Formulario Apoderado</title>
-
-<link rel="stylesheet" href="css/estilos.css" type="text/css" />
 <link rel="stylesheet" href="cssApo/cssApo.css" type="text/css" />
+<link rel="stylesheet" href="css/estilos.css" type="text/css" />
 
 
-<link rel="stylesheet" href="sweetalert2.min.css">
+
+
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -24,30 +24,24 @@
 		</nav>
 	</header>
 
-<<<<<<< HEAD
-	<div class="container">
-		<div class="container_centrar-form">
-			<h1 id="titulo">APODERADO</h1>
-			<div class="container_contenedorForm">
-=======
->>>>>>> refs/heads/Reserva_Velasquez_Arellano_Carlos
 
 
-<<<<<<< HEAD
-=======
+
 	<div class="container">
 		<div class="container_centrar-form">
-			<h1 id="titulo">APODERADO</h1>
+			
 			<div class="container_contenedorForm">
 
 
->>>>>>> refs/heads/Reserva_Velasquez_Arellano_Carlos
+
 
 				<form action="apoCrud" method="post">
 
+<h1 id="titulo">APODERADO</h1>
 
-
-
+<div class="form-group">
+							
+					
 					<div class="form-row">
 						<div class="form-group mt-2 col-md-6">
 							<label for="inputDescripcion " class="mb-0">CÓDIGO</label> <input
@@ -65,7 +59,7 @@
 						</div>
 
 					</div>
-
+	
 					<div class="form-group mt-2  ">
 						<label for="inputDescripcion" class="mb-0 text-uppercase">NOMBRES</label>
 						<input type="text" class="form-control" id="inputDescripcion"
@@ -126,6 +120,7 @@
 								href="apoCrud?btnAction=blokReg"> Buscar </a>
 						</div>
 					</div>
+					</div>
 				</form>
 
 				${alerta }
@@ -136,7 +131,7 @@
 
 
 
-	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>

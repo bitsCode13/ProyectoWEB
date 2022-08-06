@@ -2,6 +2,7 @@ package interfaces;
 
 import java.util.ArrayList;
 
+import model.User;
 import model.Usuario;
 
 public interface UsuarioInterfaces {
@@ -10,13 +11,14 @@ public interface UsuarioInterfaces {
 	
 	public int updateUsuario(Usuario u);
 	
-	public int deleteUsuario(int u);
+	public int deleteUsuario(Usuario u);
 	
 	public Usuario searchUsuario(int u);
 	
 	public Usuario loginUsuario(String usuario, String clave);
 	
-	ArrayList<Usuario> listUsuario();
+	ArrayList<Usuario> listaUsuario();
+	
+	ArrayList<User> listUsuario();
 
-	int generarCodigo();
 }

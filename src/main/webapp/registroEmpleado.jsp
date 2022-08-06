@@ -36,18 +36,18 @@
 						<div class="form-group">
 							<label for="inputCode">Nro. Identificador:</label> <input
 								type="text" name="txtIdEmp" class="form-control" id="inputCode"
-								value="${u.codUsu }" placeholder="Generado Automatico" readonly>
+								value="${e.idEmple }"   placeholder="Generado Automatico"   readonly >
 						</div> 
 
 						<div class="form-group">
 							<label for="inputCode">Código Empleado:</label> <input
 								type="text" name="txtCodEmp" value="${e.codEmp}"
 								class="form-control" id="inputCode" maxlength="6"
-								placeholder="Generado Automatico" readonly>
+								placeholder="Generado Automatico" required readonly>
 						</div>
 						<div class="form-group">
 							<label for="inputName">Nombre:</label> <input type="text"
-								name="txtNomEmp" value="${e.nomEmp }" class="form-control"
+								name="txtNomEmp" value="${e.nomEmp }" required class="form-control"
 								id="inputName"
 								placeholder="IngreseNombre"/>
 						</div>
@@ -60,19 +60,19 @@
         		 			<label for="inputDni">Dni:</label>
         		 				<input type="text" class="form-control" id="inputDni" 
         		 				name="txtDniEmp" value="${e.docEmp }" maxlength="8"
-        		 				placeholder="Ingrese Nro. Dni"/>
+        		 				placeholder="Ingrese Nro. Dni" required/>
         				</div>
         				<div class="form-group">
         		 			<label for="inputPhone">Telefono:</label>
         		 				<input type="text" class="form-control" id="inputPhone" 
         		 				name="txtTelEmp" value="${e.telEmp }" maxlength="9"
-        		 				placeholder="Ingrese Nro. Telefono"/>
+        		 				placeholder="Ingrese Nro. Telefono" required/>
         				</div>
         				<div class="form-group">
         		 			<label for="inputDirection">Dirección:</label>
         		 				<input type="text" class="form-control" id="inputDirection" 
         		 				name="txtDirEmp" value="${e.dirEmp }" 
-        		 				placeholder="Ingrese una dirección"/>
+        		 				placeholder="Ingrese una dirección" required/>
         				</div>
 					</div>
 					<div class="form-row">
@@ -80,7 +80,7 @@
 							<label for="inputCategory">Edad:</label> 							       		 	
         		 				<input type="number" class="form-control" id="nombre" 
         		 				name="txtEdaEmp" value="${e.edadEmp }" min="0"
-        		 				placeholder="Ingrese edad"/>        		 			
+        		 				placeholder="Ingrese edad" required/>        		 			
 						</div>
 
 						<div class="form-group col-md-6">
@@ -120,5 +120,10 @@
 		
 		</footer>
 	</div>
+	
+	
+	
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

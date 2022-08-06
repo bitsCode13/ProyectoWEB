@@ -47,8 +47,8 @@
 				
 				<div class="form-group col-md-4">
 					<label for="inputDescripcion">COD. EMPLEADO</label> <input
-						type="text" class="form-control" id="inputDescripcion" value="${u.codEmp }"
-						placeholder="Codigo de empleado" name="codEmp" required>
+						type="text" class="form-control" id="inputDescripcion"value="${u.codEmp } "
+						placeholder="Codigo de empleado" name="codEmp" required >
 				</div>
 			
 			</div>
@@ -110,13 +110,13 @@
 			
 		
 			</div>
-			
-		
+			<br>
+		${alerta }
 		</form>
 </section>
 </main>
 	<br>
-	${alerta }
+	
 	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

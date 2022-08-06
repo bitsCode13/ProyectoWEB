@@ -17,11 +17,11 @@
 						</li>
 						<li class="menu__inside">
 
-							<a href="AluCrud?btnAction=cargar"	class="menu__link menu__link--inside">Registro de Alumno</a>
+							<a href="AluCrud?btnAction=cargar"	class="menu__link menu__link--inside">Alumno</a>
 
 						</li>
 						<li class="menu__inside">
-							<a href="reservaMatricula?btnAccion=cargar"	class="menu__link menu__link--inside">Registro de Reserva Matricula</a>
+							<a href="reservaMatricula?btnAccion=cargar"	class="menu__link menu__link--inside">Reserva Matricula</a>
 						</li>						
 						<li class="menu__inside">
 							<a href="registroEmpleado?btnAccion=cargar" class="menu__link menu__link--inside">Registro de Empleados</a>

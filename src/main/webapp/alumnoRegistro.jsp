@@ -37,7 +37,7 @@
 
 			<div class="form-group mt-3">
 				<label for="inputDescripcion">CÓDIGO</label> <input type="text"
-					class="form-control" id="inputDescripcion" value="${a.cod_alumno }"
+					class="form-control" id="inputDescripcion" value="${a.cod_alumno }"${readonly}
 					placeholder="Ingrese Codigo " name="codAlu" required>
 			</div>
 
@@ -77,7 +77,7 @@
 			<div class="form-group mt-3">
 				<label for="inputDescripcion">EDAD</label> <input type="number"
 					class="form-control" id="inputDescripcion" value="${a.edad }" 
-					placeholder="Ingrese un domicilio" name="edadAlu" required>
+					placeholder="Ingrese una edad" name="edadAlu" required>
 			</div>
 
 
@@ -153,7 +153,7 @@
 
 
 			<div class="d-grid gap-2">
-				<button type="submit" class="btn btn-primary mt-3 btn-lg"
+				<button type="submit" class="btn btn-success mt-3 btn-lg"
 					name="btnAction" value="regAlu">Registrar</button>
 
 
@@ -163,11 +163,11 @@
 
 			
 		
-				<button type="submit" class="btn btn-primary mt-3 btn-lg"
+				<button type="submit" class="btn btn-danger mt-3 btn-lg"
 					name="btnAction" value="eliAlu">Eliminar</button>
 	
 			
-				<a class="btn btn-primary mt-3 btn-lg" href="AluCrud?btnAction=lisAlu"> Listado</a>			
+				<a class="btn btn-warning mt-3 btn-lg" href="AluCrud?btnAction=lisAlu"> Listado</a>			
 			
 		
 			</div>
