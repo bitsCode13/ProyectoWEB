@@ -61,19 +61,15 @@ ${alerta }
 
 			<thead>
 				<tr>
-				<%-- --%>
 					<th scope="col">CODIGO</th>
-					<th scope="col">DESCRIPCIÓN</th>
+					<th scope="col">DESCRIPCION</th>
 					<th scope="col">NOMBRES</th>
 					<th scope="col">APELLIDOS</th>
 					<th scope="col">DOCUMENTO</th>
 					<th scope="col">TELEFONO</th>
 					<th scope="col">DOMICILIO</th>
-					
-					
-					
-					
-					
+					<th scope="col"></th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -87,39 +83,34 @@ ${alerta }
 						<td>${a.nomApo }</td>
 						<td>${a.apeApo }</td>
 						<td>${a.dniApo }</td>
-						<td>${a.telApo }</td>
+						<td>${a.telApo}</td>
 						<td>${a.domApo }</td>
-						<td>  
 						
-					<%--
-						<a href="registro?btnAction=buscar&cod=${a.codApo }" > <img alt="" src="img/edit1.png" class="btn btn-link "
-								
-									 onmouseover="src='img/edit.png'"
-									onmouseout="src='img/edit1.png'"></a>
-										
-								 --%>										 
 						
+						
+						
+						<td>
 							<form action="apoCrud" method="post">
-										 <input type="hidden" name="codList" value="${a.codApo }">
+								 <input type="hidden" name="codList" value="${a.codApo}">
 								<button class="btn btn-link" name="btnAction" value="busApo">
-									<img class="img_editar"  src="img/edit.png">
+									<img class="img_editar"  src="img/edit1.png">
 									
 								</button>
 								
-								<input type="hidden" name="codApo" value="${a.codApo }">
-								<button   class="btn btn-link" name="btnAction" value="eliApo">
-									<img class="img_editar" src="img/eliminar.png" >
-								</button> <%--	--%>	
-								
-								</form>
+							</form>
  
 						</td>
-					<%-- 	<td>
-						<form action="apoCrud" method="post"> 
 						
-							</form> 
-						</td> --%>
-					
+
+						<td>
+						<form action="apoCrud" method="post"> 
+						<input type="hidden" name="codApo" value="${a.codApo}">
+								<button   class="btn btn-link" name="btnAction" value="eliApo">
+									<img class="img_editar" src="img/delete.png" >
+								</button>
+							</form> <%--  --%>
+						</td>
+					<%-- 		--%>
 					
 						
 					</tr>

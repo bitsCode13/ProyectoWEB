@@ -29,13 +29,13 @@ public class ApoderadoServlet extends HttpServlet {
 		System.out.println("BOTON SELECCIONADO "+accion);
 		
 		switch (accion) {
-		case "regApo": insert(request,response);
-		case "actApo": update(request,response);
-		case "eliApo": delete(request,response);
-		case "lstApo": list(request,response);
-		case "lstApoMul":lstApoMul(request,response);  
-		case "busApo": search(request,response);
-		case "blokReg": bloquearRegistro(request,response);
+		case "regApo": insert(request,response);break;
+		case "actApo": update(request,response);break;
+		case "eliApo": delete(request,response);break;
+		case "lstApo": list(request,response);break;
+		case "lstApoMul":lstApoMul(request,response);break;  
+		case "busApo": search(request,response);break;
+		case "blokReg": bloquearRegistro(request,response);break;
 		}
 		
 		
