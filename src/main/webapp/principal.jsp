@@ -23,24 +23,14 @@
 		
 
 		
-		<div>
-
-		<jsp:include page="empleadoRegistro.jsp"></jsp:include>
-
-		<jsp:include page="modalEmpleado.jsp"></jsp:include>
-		</div>
-		
 		<div class="container">
 		
 
 		</div>
 		
 		${alerta }
-<<<<<<< HEAD
 
-		   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        ></script>
-=======
+
 		   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

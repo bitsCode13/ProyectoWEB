@@ -24,12 +24,24 @@
 		</nav>
 	</header>
 
+<<<<<<< HEAD
+	<div class="container">
+		<div class="container_centrar-form">
+			<h1 id="titulo">APODERADO</h1>
+			<div class="container_contenedorForm">
+=======
+>>>>>>> refs/heads/Reserva_Velasquez_Arellano_Carlos
+
+
+<<<<<<< HEAD
+=======
 	<div class="container">
 		<div class="container_centrar-form">
 			<h1 id="titulo">APODERADO</h1>
 			<div class="container_contenedorForm">
 
 
+>>>>>>> refs/heads/Reserva_Velasquez_Arellano_Carlos
 
 				<form action="apoCrud" method="post">
 
