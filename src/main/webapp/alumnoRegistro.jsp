@@ -22,10 +22,8 @@
 
 
 <nav class="menu">
-
-			<jsp:include page="menu.jsp"></jsp:include>
-
-</nav>
+		<jsp:include page="menu.jsp"></jsp:include>					
+	</nav>
 
 	<div class="container">
 	

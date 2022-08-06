@@ -22,12 +22,12 @@
 </head>
 <body>
 
-	<header>
+	
 		<nav class="menu">
 			<jsp:include page="menu.jsp"></jsp:include>
 		</nav>
 
-	</header>
+	
 	
 	
 	<div class="container_Listado">
