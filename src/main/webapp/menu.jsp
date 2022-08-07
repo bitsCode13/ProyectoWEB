@@ -16,7 +16,7 @@
 							<a href="apoderadoRegistro.jsp"	class="menu__link menu__link--inside" >Apoderado</a>
 						</li>
 						<li class="menu__inside">
-							<a href="#"	class="menu__link menu__link--inside">Registro de Alumno</a>
+							<a href="AluCrud?btnAction=cargar"	class="menu__link menu__link--inside">Registro de Alumno</a>
 						</li>						
 						<li class="menu__inside">
 

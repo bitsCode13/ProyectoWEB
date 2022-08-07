@@ -116,13 +116,13 @@
 							<select id="inputState" class="form-control" name="cboApoderado">
 								<option value="-1" selected>Seleccionar..</option>
 										
-							<c:forEach items="${ lstApo}" var= "c">
+							<c:forEach items="${ lstApo}" var= "p">
 							
-							<c:if test="${a.id_apoderado== c.codApo}">
-							<option value="${ c.codApo}" selected>${ c.nomApo}</option>
+							<c:if test="${a.id_apoderado== p.codApo}">
+							<option value="${ p.codApo}" selected>${ p.nomApo}</option>
 							</c:if>
-							<c:if test="${b.id_apoderado!= c.codApo}">
-							<option value="${ c.codApo}">${ c.nomApo}</option>
+							<c:if test="${a.id_apoderado!= p.codApo}">
+							<option value="${ p.codApo}">${ p.nomApo}</option>
 							</c:if>
 							
 							</c:forEach>
@@ -133,24 +133,28 @@
 					</div>
 
 
-			<div class="form-row">
+				<div class="form-row">
 				<div class="form-group col-md-4">
-					<label for="inputState">Estado</label> <select id="inputState"
-						class="form-control" name="cboEstado">
+					<label for="inputState">Estado</label>
+					 <select id="inputState" class="form-control" name="cboEstado">
 						<option value="-1" selected>Seleccionar..</option>
-						<option value="1" >Activo</option>
-						<option value="2" >Inactivo</option>
-						<option value="3" >Contratado</option>
-						<option value="4" >Separado</option>
-						<option value="5" >Matriculado</option>
-						<option value="6" >Retirado</option>
-						<option value="7" >Reserva</option>
-						<option value="8" >Deudor</option>
-
+						<c:forEach items="${ lstEst}" var= "r">
+							
+							<c:if test="${a.estado_id_estado== r.idEst}">
+							<option value="${ r.idEst}" selected>${ r.desEst}</option>
+							</c:if>
+							<c:if test="${a.estado_id_estado!= r.idEst}">
+							<option value="${ r.idEst}">${ r.desEst}</option>
+							</c:if>
+							
+							</c:forEach>
+		
 					</select>
 
 				</div>
 			</div>
+
+
 
 
 

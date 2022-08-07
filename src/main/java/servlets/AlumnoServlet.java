@@ -11,10 +11,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.eclipse.jdt.internal.compiler.codegen.AnnotationTargetTypeConstants;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes.Array;
+
 import mantenimiento.GestionAlumno;
 import mantenimiento.GestionApoderado;
+import mantenimiento.GestionEstado;
 import model.Alumno;
 import model.Apoderado;
+import model.Estado;
 
 /**
  * Servlet implementation class AlumnoServlet
@@ -90,11 +94,17 @@ public class AlumnoServlet extends HttpServlet {
 		
 
 		
+		
+		
 		//CARGAR COMBO BOX
 		GestionApoderado gesAp = new GestionApoderado();
 		ArrayList< Apoderado> lstApo=gesAp.listApoderado();
 		request.setAttribute("lstApo", lstApo);
 
+		GestionEstado gesEs = new GestionEstado();
+		ArrayList<Estado> lstEst = gesEs.listado();
+		request.setAttribute("lstEst", lstEst);
+		
 		
 		
 		request.setAttribute("a", a);
@@ -113,6 +123,13 @@ public class AlumnoServlet extends HttpServlet {
 		ArrayList< Apoderado> lstApo=gesAp.listApoderado();
 		
 		request.setAttribute("lstApo", lstApo);
+		
+		
+		
+		GestionEstado gesEs = new GestionEstado();
+		ArrayList<Estado> lstEst = gesEs.listado();
+		request.setAttribute("lstEst", lstEst);
+		
 		
 		
 		request.getRequestDispatcher("alumnoRegistro.jsp").forward(request, response);

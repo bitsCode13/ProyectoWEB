@@ -1,5 +1,5 @@
 .container_centrar-form{
-	height:50vh;
+	
 	display:grid;
 	
 place-items:center;
@@ -32,4 +32,19 @@ place-items:center;
 	font-size:70px;
 	
 	line-height: 150px;
+}
+
+.centrarRegistro{
+	margin-left:20%;
+	margin-right: 20%;
+}
+
+.margin4{
+	margin-right: 50%;
+}
+
+.centrar_Montos{
+	display: grid;
+	grid-template-columns: 49% 49%;
+	 grid-column-gap: 10px;
 }
